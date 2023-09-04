@@ -1,0 +1,102 @@
+//# Front-end Style Guide
+
+//## Layout
+
+//The designs were created to the following widths:
+
+//- Mobile: 375px
+//- Desktop: 1440px
+
+//## Colors
+
+//### Primary
+
+$Soft_red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark_desaturated_cyan_graphic_design_text: hsl(167, 40%, 24%);
+$Dark_blue_photography_text: hsl(198, 62%, 26%);
+$Dark_moderate_cyan_footer: hsl(168, 34%, 41%);
+
+//### Neutral
+
+$Very_dark_desaturated_blue: hsl(212, 27%, 19%);
+$Very_dark_grayish_blue: hsl(213, 9%, 39%);
+$Dark_grayish_blue: hsl(232, 10%, 55%);
+$Grayish_blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+//## Typography
+
+//### Body Copy
+
+$font_size_1_8: 1.8rem;
+$font-family_Barlow: "Barlow", sans-serif;
+$font-family_fraunces: "Fraunces", serif;
+//### Font
+
+//- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
+//- Weights: 600
+//- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+//- Weights: 700, 900
+
+//## Icons
+
+//We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
+
+//- [Font Awesome](https://fontawesome.com)
+//- [IcoMoon](https://icomoon.io)
+//- [Ionicons](https://ionicons.com)
+
+
+@mixin img($w, $h, $url) {
+    display: block;
+    width: $w;
+    height: $h;
+    background-image: url($url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  %d-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @mixin h2_card($color) {
+    font-size: 3.5rem;
+    font-family: $font-family_fraunces;
+    color: $color;
+    margin-bottom: 25px;
+    font-weight: 900;
+  }
+  @mixin p_card($color) {
+    color: $color;
+    font-size: $font_size_1_8;
+    font-family: $font-family_Barlow;
+    line-height: 35px;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  @mixin a_card($color) {
+    font-size: $font_size_1_8;
+    font-family: $font-family_fraunces;
+    color: $Very_dark_desaturated_blue;
+    position: relative;
+    letter-spacing: 2px;
+    text-decoration: none;
+    z-index: 2;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      background-color: $color;
+      height: 8px;
+      left: calc(50% - 80px);
+      width: 110%;
+      opacity: 0.4;
+      border-radius: 10px;
+      transition: 0.3s;
+      z-index: -1;
+    }
+  }

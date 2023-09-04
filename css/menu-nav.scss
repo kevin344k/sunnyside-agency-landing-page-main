@@ -1,0 +1,32 @@
+@import "_variables";
+
+header {
+  .nav-container {
+    .nav-active {
+      position: relative;
+      .nav-list {
+        @extend %d-flex;
+        width: 300px;
+        position: absolute;
+        display: block;
+        list-style: none;
+        background-color: red;
+        right: 0;
+        z-index: 3;
+        li{
+            text-align: center;
+            a{
+                @include p_card($Dark_grayish_blue);
+                text-decoration: none;
+            }
+  
+        }
+        :nth-child(4){
+           a{
+            font-family: $font-family_fraunces;
+           }
+        }
+      }
+    }
+  }
+}

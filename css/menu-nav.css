@@ -1,0 +1,33 @@
+header .nav-container .nav-active .nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .nav-container .nav-active {
+  position: relative;
+}
+header .nav-container .nav-active .nav-list {
+  width: 300px;
+  position: absolute;
+  display: block;
+  list-style: none;
+  background-color: red;
+  right: 0;
+  z-index: 3;
+}
+header .nav-container .nav-active .nav-list li {
+  text-align: center;
+}
+header .nav-container .nav-active .nav-list li a {
+  color: hsl(232, 10%, 55%);
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 35px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-decoration: none;
+}
+header .nav-container .nav-active .nav-list :nth-child(4) a {
+  font-family: "Fraunces", serif;
+}/*# sourceMappingURL=menu-nav.css.map */
