@@ -1,33 +1,60 @@
-header .nav-container .nav-active .nav-list {
+header .nav-container .nav-active .nav-list-show {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+header .nav-container {
+  z-index: 3;
+}
 header .nav-container .nav-active {
   position: relative;
 }
-header .nav-container .nav-active .nav-list {
-  width: 300px;
+header .nav-container .nav-active .nav-list-show {
+  width: 325px;
   position: absolute;
-  display: block;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px 0px;
   list-style: none;
-  background-color: red;
+  background-color: white;
   right: 0;
+  top: 76px;
   z-index: 3;
 }
-header .nav-container .nav-active .nav-list li {
+header .nav-container .nav-active .nav-list-show li {
   text-align: center;
 }
-header .nav-container .nav-active .nav-list li a {
+header .nav-container .nav-active .nav-list-show li a {
   color: hsl(232, 10%, 55%);
   font-size: 1.8rem;
   font-family: "Barlow", sans-serif;
   line-height: 35px;
   margin-bottom: 25px;
   font-weight: 600;
+  font-size: 2.5rem;
   text-decoration: none;
+  font-weight: 900;
 }
-header .nav-container .nav-active .nav-list :nth-child(4) a {
+header .nav-container .nav-active .nav-list-show :nth-child(4) {
+  margin: 10px 0px;
+}
+header .nav-container .nav-active .nav-list-show :nth-child(4) button {
   font-family: "Fraunces", serif;
+  background-color: hsl(51, 100%, 49%);
+  font-size: 2rem;
+  color: hsl(212, 27%, 19%);
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+}
+header .nav-container .nav-active .nav-list-show::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -35px;
+  width: 0;
+  height: 0;
+  border-left: 35px solid transparent;
+  border-bottom: 35px solid white;
 }/*# sourceMappingURL=menu-nav.css.map */

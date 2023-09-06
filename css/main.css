@@ -26,7 +26,7 @@ header .nav-container {
   top: 0;
   justify-content: space-between;
 }
-header .nav-container .nav-active .nav-list {
+header .nav-container .nav-active .nav-list-hide {
   display: none;
 }
 header .section--hero {
@@ -367,4 +367,16 @@ footer .netwok :nth-child(4) {
 }
 footer .netwok :nth-child(4):hover {
   cursor: pointer;
+}
+footer .autor {
+  color: hsl(212, 27%, 19%);
+  font-size: 1.8rem;
+  font-family: "Barlow", sans-serif;
+  line-height: 35px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+footer .autor a {
+  text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
