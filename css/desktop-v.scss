@@ -1,0 +1,31 @@
+@import "menu-nav.scss", "main.scss";
+
+
+@media (min-width:1440px){
+    header{
+      width: 100vw;
+      .nav-container{
+        .nav-active{
+            #mobile-nav{
+             display: flex;
+            }
+            #menu-hamb{
+                display: none;
+            }
+        }
+      }
+      .section--hero{
+        div{
+            width: 100%;
+            height: 700px;
+        }
+        picture {
+            display: inline;
+            img {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+      }
+    }
+  }
