@@ -35,9 +35,15 @@ header {
             font-size: 2rem;
             color: $Very_dark_desaturated_blue;
             padding: 15px;
+            border: 1px solid $Yellow;
             border-radius: 30px;
-            border: none;
-           
+      
+            &:hover{
+              background-color: transparent;
+              border: 1px solid $Yellow;
+              color: $Yellow;
+              cursor: pointer;
+             }
           }
         }
         &::before {

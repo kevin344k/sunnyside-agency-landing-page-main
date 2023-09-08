@@ -45,8 +45,14 @@ header .nav-container .nav-active .nav-list-show :nth-child(4) button {
   font-size: 2rem;
   color: hsl(212, 27%, 19%);
   padding: 15px;
+  border: 1px solid hsl(51, 100%, 49%);
   border-radius: 30px;
-  border: none;
+}
+header .nav-container .nav-active .nav-list-show :nth-child(4) button:hover {
+  background-color: transparent;
+  border: 1px solid hsl(51, 100%, 49%);
+  color: hsl(51, 100%, 49%);
+  cursor: pointer;
 }
 header .nav-container .nav-active .nav-list-show::before {
   content: "";

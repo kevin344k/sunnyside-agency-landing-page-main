@@ -85,7 +85,7 @@ $font-family_fraunces: "Fraunces", serif;
     letter-spacing: 2px;
     text-decoration: none;
     z-index: 2;
-  
+
     &::before {
       content: "";
       position: absolute;
@@ -98,5 +98,10 @@ $font-family_fraunces: "Fraunces", serif;
       border-radius: 10px;
       transition: 0.3s;
       z-index: -1;
+
+      
+    }
+    &:hover{
+      filter: contrast(200%);
     }
   }

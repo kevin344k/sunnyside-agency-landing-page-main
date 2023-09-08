@@ -4,6 +4,12 @@ footer .netwok, footer .link-footer ul, main .section--testimonials .container--
   align-items: center;
 }
 
+footer .netwok, footer .link-footer ul, main .section--testimonials .container--client, main .card-1 .card-footer, main .card-2 .card-footer, main .card, header .section--hero div, header .nav-container, header .nav-container .nav-active .nav-list-show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header .nav-container {
   z-index: 3;
 }
@@ -45,8 +51,14 @@ header .nav-container .nav-active .nav-list-show :nth-child(4) button {
   font-size: 2rem;
   color: hsl(212, 27%, 19%);
   padding: 15px;
+  border: 1px solid hsl(51, 100%, 49%);
   border-radius: 30px;
-  border: none;
+}
+header .nav-container .nav-active .nav-list-show :nth-child(4) button:hover {
+  background-color: transparent;
+  border: 1px solid hsl(51, 100%, 49%);
+  color: hsl(51, 100%, 49%);
+  cursor: pointer;
 }
 header .nav-container .nav-active .nav-list-show::before {
   content: "";
@@ -73,6 +85,11 @@ footer .netwok, footer .link-footer ul, main .section--testimonials .container--
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  margin: auto;
 }
 
 header {
@@ -178,6 +195,9 @@ main .card-1 .card-footer a::before, main .card-2 .card-footer a::before {
   transition: 0.3s;
   z-index: -1;
 }
+main .card-1 .card-footer a:hover, main .card-2 .card-footer a:hover {
+  filter: contrast(200%);
+}
 main .card-2 .card-footer a {
   font-size: 1.8rem;
   font-family: "Fraunces", serif;
@@ -199,6 +219,9 @@ main .card-2 .card-footer a::before {
   border-radius: 10px;
   transition: 0.3s;
   z-index: -1;
+}
+main .card-2 .card-footer a:hover {
+  filter: contrast(200%);
 }
 main .card-3, main .card-4 {
   position: relative;
@@ -340,15 +363,18 @@ main .sect--collage {
   display: grid;
   grid: auto auto/50% 50%;
 }
+main .sect--collage picture {
+  width: auto;
+}
 main .sect--collage picture img {
-  display: block;
-  width: 50vw;
+  width: 100%;
 }
 
 footer {
   background-color: hsl(168, 34%, 41%);
   padding: 20px 20px;
   text-align: center;
+  max-width: 375px;
   width: 100%;
 }
 footer .logo {
@@ -381,53 +407,12 @@ footer .netwok {
   gap: 25px;
   margin: 40px 0px;
 }
-footer .netwok :nth-child(1) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-facebook.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+footer .netwok a svg {
+  width: 40px;
+  height: 40px;
 }
-footer .netwok :nth-child(1):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(2) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-instagram.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(2):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(3) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-twitter.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(3):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(4) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-pinterest.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(4):hover {
-  cursor: pointer;
+footer .netwok a:hover svg path {
+  fill: white;
 }
 footer .autor {
   color: hsl(212, 27%, 19%);
@@ -445,16 +430,47 @@ footer .autor a {
 @media (min-width: 1440px) {
   header {
     width: 100vw;
+    height: 700px;
   }
-  header .nav-container .nav-active #mobile-nav {
+  header .nav-container .nav-active ul {
     display: flex;
+    gap: 30px;
+    align-items: center;
   }
-  header .nav-container .nav-active #menu-hamb {
+  header .nav-container .nav-active ul li {
+    list-style: none;
+    text-align: center;
+  }
+  header .nav-container .nav-active ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.8rem;
+  }
+  header .nav-container .nav-active ul li button {
+    font-family: "Fraunces", serif;
+    background-color: white;
+    border: 1px solid white;
+    font-size: 1.4rem;
+    color: hsl(212, 27%, 19%);
+    padding: 15px;
+    border-radius: 30px;
+  }
+  header .nav-container .nav-active ul li button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+  }
+  header .nav-container #menu-hamb {
     display: none;
+  }
+  header .section--hero {
+    width: 100vw;
   }
   header .section--hero div {
     width: 100%;
-    height: 700px;
+    height: 650px;
   }
   header .section--hero picture {
     display: inline;
@@ -462,5 +478,92 @@ footer .autor a {
   header .section--hero picture img {
     display: inline-block;
     width: 100%;
+    height: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main {
+    width: 100vw;
+  }
+  main .card {
+    flex-direction: row;
+    width: 100%;
+  }
+  main .card-1, main .card-2 {
+    width: 100vw;
+  }
+  main .card-1 .card-header, main .card-2 .card-header {
+    width: 50%;
+    order: 2;
+  }
+  main .card-1 .card-footer, main .card-2 .card-footer {
+    width: 50%;
+    padding: 60px;
+    padding-right: 250px;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  main .card-2 .card-header {
+    line-height: 0px;
+  }
+  main .card-2 .card-footer {
+    order: 2;
+  }
+  main .card3-4 {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+  }
+  main .card3-4 .card-3, main .card3-4 .card-4 {
+    padding: 0px;
+  }
+  main .card3-4 .card-3 picture, main .card3-4 .card-4 picture {
+    width: 100%;
+    height: 650px;
+  }
+  main .card3-4 .card-3 picture img, main .card3-4 .card-4 picture img {
+    width: 100%;
+  }
+  main .card3-4 .card-3 .card-footer, main .card3-4 .card-4 .card-footer {
+    width: 500px;
+  }
+  main .card3-4 .card-4 {
+    padding: 0px;
+  }
+  main .card3-4 .card-4 picture {
+    width: 100%;
+    height: 650px;
+  }
+  main .card3-4 .card-4 picture img {
+    width: 100%;
+  }
+  main .section--testimonials {
+    padding: 55px 80px;
+  }
+  main .section--testimonials .container--client {
+    margin-top: 90px;
+    flex-direction: row;
+    gap: 160px;
+  }
+  main .sect--collage {
+    width: 100vw;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto;
+  }
+  main .sect--collage picture img {
+    display: inline-block;
+    width: 100%;
+  }
+  footer {
+    max-width: none;
+    width: 100%;
+  }
+  footer .link-footer ul {
+    justify-content: center;
+    gap: 50px;
+  }
+  footer .link-footer ul li a:hover {
+    color: white;
   }
 }/*# sourceMappingURL=desktop-v.css.map */

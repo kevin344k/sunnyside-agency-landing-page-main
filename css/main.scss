@@ -5,14 +5,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-size: 62.5%;
 }
 
+body{
+  overflow-x: hidden;
+  margin: auto;
+
+}
 header {
   width: 375px;
+
   padding-bottom: 0px;
   position: relative;
+
   .nav-container {
     width: 100%;
     padding: 25px;
@@ -22,14 +30,16 @@ header {
     justify-content: space-between;
 
     .nav-active {
-     
-      .nav-list-hide{
-         display: none;
+
+      .nav-list-hide {
+        display: none;
       }
     }
   }
+
   .section--hero {
     height: 538px;
+
     div {
       width: 375px;
       height: 538px;
@@ -42,6 +52,7 @@ header {
         @include img(40px, 120px, "../images/icon-arrow-down.svg");
         margin-top: 50px;
       }
+
       h1 {
         color: $White;
         font-family: $font-family_fraunces;
@@ -50,8 +61,10 @@ header {
         letter-spacing: 8px;
       }
     }
+
     picture {
       display: inline;
+
       img {
         display: inline-block;
         width: 375px;
@@ -59,41 +72,49 @@ header {
     }
   }
 }
+
 main {
   width: 375px;
-
   .card {
     width: 100%;
     @extend %d-flex;
     flex-direction: column;
   }
+
   .card-1 {
     .card-header {
       img {
         width: 100%;
       }
     }
+
     .card-footer {
       height: auto;
       padding: 60px 25px;
       @extend %d-flex;
       flex-direction: column;
       text-align: center;
+
       h2 {
         @include h2_card($Very_dark_desaturated_blue);
       }
+
       p {
         @include p_card($Dark_grayish_blue);
       }
+
       a {
         @include a_card($Yellow);
+        
       }
     }
   }
+
   .card-2 {
     @extend .card-1;
 
     .card-footer {
+    
       a {
         @include a_card($Soft_red);
       }
@@ -105,34 +126,42 @@ main {
     padding: 25px;
     padding-top: 0px;
     padding-bottom: 0px;
+
     picture {
       height: 600px;
+
       img {
         width: 375px;
         object-fit: cover;
       }
     }
+
     .card-footer {
       position: absolute;
       bottom: 0;
       padding: 25px;
       margin-bottom: 25px;
       text-align: center;
+
       h2 {
         @include h2_card($Dark_desaturated_cyan_graphic_design_text);
       }
+
       p {
         @include p_card($Dark_desaturated_cyan_graphic_design_text);
         margin-bottom: 0;
       }
     }
   }
+
   .card-4 {
     @extend .card-3;
+
     .card-footer {
       h2 {
         @include h2_card($Dark_blue_photography_text);
       }
+
       p {
         @include p_card($Dark_blue_photography_text);
       }
@@ -149,33 +178,40 @@ main {
       letter-spacing: 4px;
       margin-bottom: 35px;
     }
+
     .container--client {
       @extend %d-flex;
       flex-direction: column;
       gap: 25px;
+
       .div-Emily {
         text-align: center;
+
         .ico-client {
           @include img(60px, 60px, "../images/image-emily.jpg");
           border-radius: 100%;
           display: inline-block;
           margin-bottom: 20px;
         }
+
         p {
           @include p_card($Very_dark_grayish_blue);
         }
+
         .name--cli {
           display: block;
           @include p_card($Very_dark_desaturated_blue);
           font-family: $font-family_fraunces;
           margin-bottom: 0px;
         }
+
         .roll-client {
           display: block;
           @include p_card($Dark_grayish_blue);
           font-size: 1.5rem;
         }
       }
+
       .div-Thomas {
         @extend .div-Emily;
 
@@ -195,88 +231,94 @@ main {
       }
     }
   }
+
   .sect--collage {
-    width: 375px;
+   width: 375px;
     line-height: 0px;
     display: grid;
     grid: auto auto/50% 50%;
-
     picture {
+      width: auto;
+    
       img {
-        display: block;
-        width: 50vw;
+       width: 100%;
+  
+       
       }
     }
+
   }
 }
+
 footer {
   background-color: $Dark_moderate_cyan_footer;
   padding: 20px 20px;
   text-align: center;
+  max-width: 375px;
   width: 100%;
+
   .logo {
     height: auto;
     margin: 40px 0px;
+
     svg {
       path {
         fill: $Dark_desaturated_cyan_graphic_design_text;
       }
     }
   }
-  .link-footer{
+
+  .link-footer {
     width: 100%;
- ul{
-    @extend %d-flex;
-    justify-content: space-evenly;
-    li{
-        list-style: none;  
- a{
-  
-    @include p_card($Dark_desaturated_cyan_graphic_design_text);
-    font-weight: 600;
-    text-decoration: none
- }
+
+    ul {
+      @extend %d-flex;
+      justify-content: space-evenly;
+
+      li {
+        list-style: none;
+
+        a {
+
+          @include p_card($Dark_desaturated_cyan_graphic_design_text);
+          font-weight: 600;
+          text-decoration: none
+        }
+      }
     }
- }
   }
-  .netwok{
+
+  .netwok {
     @extend %d-flex;
     gap: 25px;
     margin: 40px 0px;
-    :nth-child(1){
-        @include img(30px, 30px, "../images/icon-facebook.svg"); 
-        &:hover{
-            cursor: pointer;
-        } 
+
+   a{
+    svg{
+      width: 40px;
+      height: 40px;
+
     }
-    :nth-child(2){
-        @include img(30px, 30px, "../images/icon-instagram.svg");
-        &:hover{
-            cursor: pointer;
-        } 
+    &:hover{
+      svg{
+        path{
+          fill: white;
+        }
+      }
     }
-    :nth-child(3){
-        @include img(30px, 30px, "../images/icon-twitter.svg");
-        &:hover{
-            cursor: pointer;
-        } 
-    }
-    :nth-child(4){
-        @include img(30px, 30px, "../images/icon-pinterest.svg");
-        &:hover{
-            cursor: pointer;
-        } 
-    }
-  
+   }
+
   }
-  .autor{
+
+  .autor {
 
     @include p_card($Very_dark_desaturated_blue);
     font-size: 1.5rem;
-   a{
-    text-decoration: none;
-   }
-       
+
+    a {
+      text-decoration: none;
+    }
+
   }
 
 }

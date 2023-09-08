@@ -14,6 +14,11 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+  margin: auto;
+}
+
 header {
   width: 375px;
   padding-bottom: 0px;
@@ -117,6 +122,9 @@ main .card-1 .card-footer a::before, main .card-2 .card-footer a::before {
   transition: 0.3s;
   z-index: -1;
 }
+main .card-1 .card-footer a:hover, main .card-2 .card-footer a:hover {
+  filter: contrast(200%);
+}
 main .card-2 .card-footer a {
   font-size: 1.8rem;
   font-family: "Fraunces", serif;
@@ -138,6 +146,9 @@ main .card-2 .card-footer a::before {
   border-radius: 10px;
   transition: 0.3s;
   z-index: -1;
+}
+main .card-2 .card-footer a:hover {
+  filter: contrast(200%);
 }
 main .card-3, main .card-4 {
   position: relative;
@@ -279,15 +290,18 @@ main .sect--collage {
   display: grid;
   grid: auto auto/50% 50%;
 }
+main .sect--collage picture {
+  width: auto;
+}
 main .sect--collage picture img {
-  display: block;
-  width: 50vw;
+  width: 100%;
 }
 
 footer {
   background-color: hsl(168, 34%, 41%);
   padding: 20px 20px;
   text-align: center;
+  max-width: 375px;
   width: 100%;
 }
 footer .logo {
@@ -320,53 +334,12 @@ footer .netwok {
   gap: 25px;
   margin: 40px 0px;
 }
-footer .netwok :nth-child(1) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-facebook.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+footer .netwok a svg {
+  width: 40px;
+  height: 40px;
 }
-footer .netwok :nth-child(1):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(2) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-instagram.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(2):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(3) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-twitter.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(3):hover {
-  cursor: pointer;
-}
-footer .netwok :nth-child(4) {
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url("../images/icon-pinterest.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-footer .netwok :nth-child(4):hover {
-  cursor: pointer;
+footer .netwok a:hover svg path {
+  fill: white;
 }
 footer .autor {
   color: hsl(212, 27%, 19%);
